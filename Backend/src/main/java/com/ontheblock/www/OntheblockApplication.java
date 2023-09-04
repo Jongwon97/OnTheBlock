@@ -1,15 +1,3 @@
-package com.ontheblock.www;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
-@SpringBootApplication
-@EnableJpaAuditing
-public class OntheblockApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(OntheblockApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e47fa2f96735d61f7b487bdf2ef1f462f6163443796d80d85d3b30990abe863
+size 411
