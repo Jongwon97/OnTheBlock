@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:62bff3712e8c01990a92db562348a6877de031de08cce91ffabfcd8538591634
-size 301
+package com.ontheblock.www.genre.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.ontheblock.www.genre.domain.Genre;
+
+@Repository
+public interface MemberGenreRepository extends JpaRepository<Genre, Integer> {
+
+
+}

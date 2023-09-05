@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:600200bcc30d66b2e20c235b29c1950a14b34599685c3491123f11702bdee7a8
-size 299
+package com.ontheblock.www.session.repository;
+
+import com.ontheblock.www.session.domain.Session;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SessionRepository extends JpaRepository<Session, Long> {
+}
