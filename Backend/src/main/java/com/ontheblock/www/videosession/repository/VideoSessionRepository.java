@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34328bf517c2ce572503bcc4962d0dfd5b12147262df03aa20bcd261b48e562c
-size 325
+package com.ontheblock.www.videosession.repository;
+
+import com.ontheblock.www.videosession.domain.VideoSession;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface VideoSessionRepository extends JpaRepository< VideoSession, Long> {
+}

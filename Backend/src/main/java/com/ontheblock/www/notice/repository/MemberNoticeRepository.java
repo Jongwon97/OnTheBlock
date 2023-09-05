@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aeaee2aa533255eab5374d32255534563ad81c5ec2143f94225173c52e59118d
-size 318
+package com.ontheblock.www.notice.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.ontheblock.www.notice.domain.MemberNotice;
+
+@Repository
+public interface MemberNoticeRepository extends JpaRepository<MemberNotice, Integer> {
+
+
+}
