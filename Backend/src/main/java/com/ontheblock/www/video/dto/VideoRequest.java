@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d25261266745a29aabd1df24c153e5b27cd9286fcc3fed8c86937f0877004ebc
-size 408
+package com.ontheblock.www.video.dto;
+
+import com.ontheblock.www.session.dto.SessionOriginRequest;
+import com.ontheblock.www.session.dto.SessionRequest;
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+public class VideoRequest {
+    String name;
+    String description;
+    Long songId;
+    SessionRequest session;
+    List<SessionOriginRequest> origins = new ArrayList<>();
+}
