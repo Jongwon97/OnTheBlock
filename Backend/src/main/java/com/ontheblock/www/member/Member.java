@@ -1,18 +1,3 @@
-package com.ontheblock.www.member;
-
-import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-
-@Getter
-@Entity
-public class Member {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="member_id")
-    private Long id;
-
-    private String email;
-    private String description;
-    private String token;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc48377d5ce6a523352c51fb0640379f7a2e9f020e8f2fdbd43badb31d56d790
+size 377
