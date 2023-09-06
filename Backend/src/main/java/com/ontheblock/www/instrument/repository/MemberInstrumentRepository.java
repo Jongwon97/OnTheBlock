@@ -1,11 +1,3 @@
-package com.ontheblock.www.instrument.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import com.ontheblock.www.instrument.domain.MemberInstrument;
-
-@Repository
-public interface MemberInstrumentRepository extends JpaRepository<MemberInstrument, Integer> {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f438eb4a814a767ab12a67ebe15fb9ba1e17d769ae870760ca62ef1ba34b9d03
+size 334

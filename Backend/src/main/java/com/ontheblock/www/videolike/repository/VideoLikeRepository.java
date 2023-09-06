@@ -1,11 +1,3 @@
-package com.ontheblock.www.videolike.repository;
-
-import com.ontheblock.www.video.domain.Video;
-import com.ontheblock.www.videolike.domain.VideoLike;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface VideoLikeRepository extends JpaRepository<VideoLike, Long> {
-    long countByVideo(Video video);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf83c6ff4e86f708ce9a111187062094eae80861a9392ca1fed81fde746e00b8
+size 391
