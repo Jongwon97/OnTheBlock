@@ -1,23 +1,3 @@
-package com.ontheblock.www.comment.dto;
-
-import com.ontheblock.www.comment.domain.Comment;
-import com.ontheblock.www.member.dto.MemberResponse;
-import lombok.Data;
-
-import java.time.LocalDateTime;
-
-@Data
-public class CommentResponse {
-    Long commentId;
-
-    MemberResponse member;
-
-    String content;
-
-    LocalDateTime createdTime;
-
-    public CommentResponse(Comment comment){
-        this.commentId = comment.getId();
-        this.member = new MemberResponse(comment.getMember());
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d6ed10eda34f222b317a91813bdd97f2e186293af30d042d49dfdc462845fdc
+size 495
