@@ -1,6 +1,3 @@
-export { default as Header } from './layout/Header'
-export { default as Footer } from './layout/Footer'
-export { default as MyPageInfo } from './mypage/MyPageInfo'
-export { default as MyPageContent } from './mypage/MyPageContent'
-export { default as Thumbnail } from './thumbnail/Thumbnail'
-export { default as ThumbnailSwiper } from './thumbnail/ThumbnailSwiper'
+version https://git-lfs.github.com/spec/v1
+oid sha256:7967835d3512409bfc2fdfc94277680a73ab1b3aaa23d5b83835f985278edda1
+size 363
