@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e8971a92ffa20b3ee7247c79bcc208e5154668a7c66c89a5d76734bd7fa4a9e
-size 363
+package com.ontheblock.www.member.service;
+
+import com.ontheblock.www.member.Member;
+
+public interface MemberService {
+    public void saveRefreshToken(Member member);	                    // 토큰 저장
+    public String getRefreshToken(Long id);								// 토큰 반환
+    public void deleteRefreshToken(Long userId);                        // 토큰 삭제
+}
