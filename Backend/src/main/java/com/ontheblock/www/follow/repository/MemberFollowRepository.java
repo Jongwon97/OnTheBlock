@@ -1,14 +1,3 @@
-package com.ontheblock.www.follow.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import com.ontheblock.www.follow.domain.MemberFollow;
-import com.ontheblock.www.member.Member;
-
-@Repository
-public interface MemberFollowRepository extends JpaRepository<MemberFollow, Long> {
-	MemberFollow findByFollower(Member follower);
-	MemberFollow findByFollowerAndFollowing(Member follower, Member following);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f52905dda3a4d91ea0e1d526397b9cab6f799d1b740d3af7aef6ca7b14175a97
+size 479
