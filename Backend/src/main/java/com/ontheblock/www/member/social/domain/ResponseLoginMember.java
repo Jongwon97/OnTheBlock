@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bdba1131924243de9f9ffe10714a448136f998c0212d8f0398bb62865646e446
-size 431
+package com.ontheblock.www.member.social.domain;
+
+import com.ontheblock.www.member.Member;
+import lombok.Data;
+
+@Data
+public class ResponseLoginMember {
+    private Long memberId;
+    private String nickname;
+    private int isNewMember;
+
+    public ResponseLoginMember(Member member, int isNewMember){
+        this.memberId=member.getId();
+        this.nickname=member.getNickName();
+        this.isNewMember=isNewMember;
+    }
+}
