@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d4fe2c2dbc657c9f36688bf9e0858e3eae84018a46dc8f38d706efa25556c952
-size 240
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: { 
+      '@' : path.resolve(__dirname, "./src")
+    }
+  }
+})
+
