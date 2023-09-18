@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7c3ca7f28b994774997f87e89df09392ff8e17cb86991520b393a79e0cfce57
-size 302
+import { client, clientWithToken } from "./client";
+
+const followURL = 'follow/';
+
+export const getFollower=()=>{
+    return clientWithToken().get(followURL + 'member/follower/check');
+}
+
+export const getFollowing=()=>{
+    return clientWithToken().get(followURL + 'member/following/check');
+}
