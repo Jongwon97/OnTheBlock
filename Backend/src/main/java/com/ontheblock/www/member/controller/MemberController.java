@@ -1,13 +1,3 @@
-package com.ontheblock.www.member.controller;
-
-import ch.qos.logback.core.CoreConstants;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-@RequestMapping("/api/member")
-public class MemberController {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c99a33a9f41aded2b61a33b43c0872e0300039a6b9eb57aca33cfede0b5782a3
+size 1230
