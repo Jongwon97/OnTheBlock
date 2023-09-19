@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:db6556cd1c6874d2652d3eba2f1ba2367f9c79e68d10a1b1898c69eaeea1705b
-size 503
+package com.ontheblock.www.follow.dto;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.ontheblock.www.follow.domain.MemberFollow;
+
+import lombok.Data;
+
+@Data
+public class MemberFollowingResponse {
+
+	private List<MemberFollowDTO> followings;
+
+	public MemberFollowingResponse(List<MemberFollow> followings) {
+		this.followings = followings.stream()
+			.map(f -> new MemberFollowDTO(f.getFollowing().getId(), f.getFollowing().getNickName()))
+			.collect(Collectors.toList());
+	}
+
+}
