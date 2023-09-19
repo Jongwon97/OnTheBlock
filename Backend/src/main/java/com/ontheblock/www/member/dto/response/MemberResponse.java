@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:484604a430141959672f6259b25c1d297f0dddeda52806612d3f51bdc7533ec0
-size 325
+package com.ontheblock.www.member.dto.response;
+
+import com.ontheblock.www.member.Member;
+import lombok.Data;
+
+@Data
+public class MemberResponse {
+    Long memberId;
+    String nickname;
+
+    public MemberResponse(Member member){
+        this.memberId = member.getId();
+        this.nickname = member.getNickName();
+    }
+
+}
