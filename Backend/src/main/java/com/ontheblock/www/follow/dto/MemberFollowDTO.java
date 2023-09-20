@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af08fac6866dea49aad28c02a39f1ec8e7830c946b85ef34043ae42e15c28826
-size 279
+package com.ontheblock.www.follow.dto;
+
+import lombok.Data;
+
+@Data
+public class MemberFollowDTO {
+	private Long id;
+	private String nickName;
+
+	// 팔로워 팔로잉 목록 DTO
+	public MemberFollowDTO(Long id, String nickName) {
+		this.id = id;
+		this.nickName = nickName;
+	}
+}

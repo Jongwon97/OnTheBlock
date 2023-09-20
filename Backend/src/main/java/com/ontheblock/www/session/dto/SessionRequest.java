@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a4ba4cc759862e841be2cfb019889e79fd113bb23372651d85d920c0c04af14b
-size 143
+package com.ontheblock.www.session.dto;
+
+import lombok.Data;
+
+@Data
+public class SessionRequest {
+    Long memberId;
+    Long instrumentId;
+    Integer volume;
+    Integer startPoint;
+    String sessionPosition;
+}
