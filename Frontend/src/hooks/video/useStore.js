@@ -1,7 +1,3 @@
-import { create } from "zustand";
-
-export const videoModalState = create((set) => ({
-  isVideoModalOpen: false,
-  setIsVideoModalOpen: () =>
-    set((state) => ({ isVideoModalOpen: !state.isVideoModalOpen })),
-}));
+version https://git-lfs.github.com/spec/v1
+oid sha256:c1bdd16176b00a698e30ce1656ff3a82258d522132e8db3bb08cc4425af0cfd3
+size 215
