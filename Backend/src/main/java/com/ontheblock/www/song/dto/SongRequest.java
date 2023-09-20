@@ -4,7 +4,5 @@ import lombok.Data;
 
 @Data
 public class SongRequest {
-    String name;
-    String code;
-    String artist;
+    Long songId;
 }

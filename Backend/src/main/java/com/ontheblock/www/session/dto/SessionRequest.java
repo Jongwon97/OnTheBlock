@@ -5,6 +5,8 @@ import lombok.Data;
 @Data
 public class SessionRequest {
     Long memberId;
-
     Long instrumentId;
+    Integer volume;
+    Integer startPoint;
+    String sessionPosition;
 }

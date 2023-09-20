@@ -7,4 +7,5 @@ public class SessionOriginRequest {
     Long sessionId;
     Integer volume;
     Integer startPoint;
+    String sessionPosition;
 }
