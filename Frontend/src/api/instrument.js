@@ -1,15 +1,3 @@
-import { client,clientWithToken } from "./client";
-
-const InstrumentURL = 'instrument/';
-
-export const getAllInstruments = () => {
-    return client().get(InstrumentURL + 'findAll');
-  };
-
-export const registMemberInstruments=(selectedInstruments)=>{
-    return clientWithToken().post(InstrumentURL+'member/check',selectedInstruments);
-}
-
-export const getMyInstruments=()=>{
-  return clientWithToken().get(InstrumentURL+'get/member/check');
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:77428df30c1c892237cb0884b8eb1cf912a6b25c44163df629f09313e198ea58
+size 442
