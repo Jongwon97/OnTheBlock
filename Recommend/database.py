@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f819c8d2873911b5b6f0b722d7a3801515303ab53c2c67720f8ee6c8794a83ba
-size 459
+from sqlalchemy import *
+from sqlalchemy.orm import sessionmaker
+
+
+DB_URL = 'mysql+pymysql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}'
+
+class engineconn:
+
+    def __init__(self):
+        self.engine = create_engine(DB_URL, pool_recycle = 500)
+
+    def sessionmaker(self):
+        Session = sessionmaker(bind=self.engine)
+        session = Session()
+        return session
+
+    def connection(self):
+        conn = self.engine.connect()
+        return conn

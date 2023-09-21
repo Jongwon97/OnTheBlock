@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:11afe1c8559e75cabeb7db4d04c90fbc0bc864bbb7fcd4bb40444792f31310bf
-size 391
+import { client, clientWithToken } from "./client";
+
+const GenreURL = 'genre/';
+
+export const getAllGenres = () => {
+    return client().get(GenreURL + 'findAll');
+};
+
+export const registMemberGenres=(selectedGenre)=>{
+    return clientWithToken().post(GenreURL+'member/check',selectedGenre);
+};
+
+export const getMyGenres=()=>{
+  return clientWithToken().get(GenreURL+'get/member/check');
+};
