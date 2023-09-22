@@ -1,25 +1,3 @@
-import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
-import { RecordSessionComponent } from "@/components";
-
-function SessionRecord() {
-  const navigate = useNavigate();
-
-  return (
-    <S.Wrap>
-      <RecordSessionComponent />
-    </S.Wrap>
-  );
-}
-
-const S = {
-  Wrap: styled.div`
-    min-height: 100vh;
-    background: #252525;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    color: #d7d7d7;
-  `,
-};
-
-export default SessionRecord;
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3362ecbe98c7ec9f95ff4ecbfb8bd502e4f6fde5863f1eaeba0ce296a638b24
+size 471
