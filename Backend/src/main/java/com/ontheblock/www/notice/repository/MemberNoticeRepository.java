@@ -1,15 +1,3 @@
-package com.ontheblock.www.notice.repository;
-
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import com.ontheblock.www.member.Member;
-import com.ontheblock.www.notice.domain.MemberNotice;
-
-@Repository
-public interface MemberNoticeRepository extends JpaRepository<MemberNotice, Long> {
-	List<MemberNotice> findByMember(Member member);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f076b0f76515558afffe06ca7bb61c15875f0e262d0fed86b46f4dbd5ecdee5b
+size 481
