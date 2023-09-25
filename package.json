@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce5d79fa7e3b17ce9413be3a762c02dfed089dc920b82f1c687dad30ab90e6d8
-size 73
+{
+  "dependencies": {
+    "rollup-plugin-node-polyfills": "^0.2.1"
+  }
+}
