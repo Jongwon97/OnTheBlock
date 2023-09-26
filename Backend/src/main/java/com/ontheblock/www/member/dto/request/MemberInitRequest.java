@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:49c412891759c0a9f4d6ba6c7081040e33673b3e1290b5a2c2177e260b29cb2b
-size 398
+package com.ontheblock.www.member.dto.request;
+
+import com.ontheblock.www.genre.domain.Genre;
+import com.ontheblock.www.instrument.domain.Instrument;
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+public class MemberInitRequest {
+    Long memberId;
+    String nickName;
+    List<Instrument> instruments=new ArrayList<>();
+    List<Genre> genres=new ArrayList<>();
+}
