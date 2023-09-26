@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cff674729413c1505caa4f49d310431c0b419b5356148bc0a9ad28e1b4dbc240
-size 319
+import { client,clientWithToken } from "./client";
+
+const NoticeURL = 'notice/';
+
+export const getNotices = () => {
+    return clientWithToken().get(NoticeURL + 'member/check');
+};
+
+export const deleteNotice =(noticeId)=>{
+    return clientWithToken().delete(NoticeURL + 'member/' + noticeId + '/check', noticeId);
+};
+
