@@ -7,6 +7,7 @@ public class SessionRequest {
     Long memberId;
     Long instrumentId;
     Integer volume;
+    Integer totalFrame;
     Integer startPoint;
     String sessionPosition;
 }
