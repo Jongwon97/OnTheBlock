@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6bf817d6da132574d59356bdde9487ba6f277965a0c21800380de922f83cc9e
-size 341
+package com.ontheblock.www.song.dto;
+
+import com.ontheblock.www.song.domain.Song;
+import lombok.Data;
+
+@Data
+public class SongResponse {
+    String name;
+    String code;
+    String artist;
+
+    public SongResponse(Song song){
+        this.name=song.getName();
+        this.code=song.getCode();
+        this.artist=song.getArtist();
+    }
+}
