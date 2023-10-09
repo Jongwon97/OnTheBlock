@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:76599f8a08851f1be4d3e675ea90f88ca275a84a50e8c1af2bbe2388fab4542a
-size 339
+from ElasticUtil import ElasticUtil
+
+def get_elastic_client(endpoint: str):
+    try:
+        eu = ElasticUtil(endpoint)
+    except Exception as e:
+        print(e)
+        exit(1)
+    return eu
+
+def load_model():
+    from sentence_transformers import SentenceTransformer
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    return model
