@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72c8b1507eb52128f57a54b2ff0a6684b38073196e77ef3d8644ad770228e53d
-size 785
+import { client, clientWithToken } from "./client";
+
+const followURL = 'follow/';
+
+export const getFollower=(memberId)=>{
+    return clientWithToken().get(followURL + 'member/follower/check', { params: { memberId } });
+}
+
+export const getFollowing=(memberId)=>{
+    return clientWithToken().get(followURL + 'member/following/check', { params: { memberId } });
+}
+
+export const checkFollow=(followingId)=>{
+    return clientWithToken().get(followURL + 'member/' + followingId + '/check', followingId);
+}
+
+export const addFollow=(followingId)=>{
+    return clientWithToken().post(followURL + 'member/' + followingId + '/check', followingId);
+}
+
+export const deleteFollow=(followingId)=>{
+    return clientWithToken().delete(followURL + 'member/' + followingId + '/check', followingId);
+}

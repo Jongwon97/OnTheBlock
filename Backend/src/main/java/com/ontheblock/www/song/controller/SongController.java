@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae2b7fa149b5beaec9796d5f9b5fd2fb8604b63452394ca9b8e8c0551ebfcc0b
-size 741
+package com.ontheblock.www.song.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ontheblock.www.song.domain.Song;
+import com.ontheblock.www.song.service.SongService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/song")
+public class SongController {
+
+	private final SongService songService;
+
+	@GetMapping("/name/check")
+	public List<Song> getSongsByName(@RequestParam String songName) {
+		return songService.getSongsByName(songName);
+	}
+
+
+
+}

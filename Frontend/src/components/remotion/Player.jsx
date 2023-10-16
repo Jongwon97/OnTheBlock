@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8a58f244e4fb4c739fa0327b76ef00223426c14f00e6746e2c6d0d2bec824b3e
-size 608
+import { Player } from "@remotion/player";
+import Clips from "@/components/remotion/Clips.jsx";
+
+/*
+To-Do : 
+- 클립별 프레임 조정으로 싱크 맞추기
+- InFrame 또는 OutFrame으로 전체 비디오 자르기
+- 위치 Swap.
+*/
+function Composition() {
+
+  return (
+    <>
+      <Player
+        component={Clips}
+        durationInFrames={120}
+        compositionWidth={1920}
+        compositionHeight={1080}
+        fps={30}
+        controls
+        style={{
+          width: 800,
+          height: 600,
+        }}
+      />
+      <input type="number"/>
+    </>
+  );
+};
+
+export default Composition;

@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a145f807ae9b7fffa90c5a31ed2f197ff8f8f2697ab32422484f29119c8a1045
-size 977
+package com.ontheblock.www.member.interceptor;
+
+import jakarta.servlet.http.HttpServletRequest;
+import java.util.Objects;
+import org.springframework.http.HttpMethod;
+
+public class PreflightChecker {
+  // PreFlight 처리
+  public static boolean isPreflightRequest(HttpServletRequest request) {
+    return isOptions(request) && hasHeaders(request) && hasMethod(request) && hasOrigin(request);
+  }
+
+  private static boolean isOptions(HttpServletRequest request) {
+    return request.getMethod().equalsIgnoreCase(HttpMethod.OPTIONS.toString());
+  }
+
+  private static boolean hasHeaders(HttpServletRequest request) {
+    return Objects.nonNull(request.getHeader("Access-Control-Request-Headers"));
+  }
+
+  private static boolean hasMethod(HttpServletRequest request) {
+    return Objects.nonNull(request.getHeader("Access-Control-Request-Method"));
+  }
+
+  private static boolean hasOrigin(HttpServletRequest request) {
+    return Objects.nonNull(request.getHeader("Origin"));
+  }
+}

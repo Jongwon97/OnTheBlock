@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a708a71bbb6f7f4e26101f1aad47e150c23021610d66e4738308430a2f161449
-size 852
+import { client, clientWithTokenAndMedia } from "./client";
+
+const SessionUploadURL = "/videos/upload/check";
+
+export const registSession = async (data, file, thumbnail) => {
+  
+  const formData = new FormData();
+  formData.append(
+    "video",
+    new Blob([JSON.stringify(data)], { type: "application/json" })
+  );
+  const fileName = "filename";
+  const videoExtension = file.type.split('/').pop();
+  formData.append("file", file, `${fileName}.${videoExtension}`);
+  formData.append("thumbnail", thumbnail, `${fileName}.png`);
+
+  return clientWithTokenAndMedia()
+    .post(SessionUploadURL, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        accept: "application/json",
+      },
+    })
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      alert(error);
+      return null;
+    });;
+};

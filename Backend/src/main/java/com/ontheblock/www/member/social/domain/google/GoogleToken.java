@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10ac0091f12d0caa52b3aacbf4337b8a8da03b4302939d8d3a60321b2dcbb5ed
-size 545
+package com.ontheblock.www.member.social.domain.google;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Data
+@NoArgsConstructor
+public class GoogleToken {
+  @JsonProperty("token_type")
+  private String tokenType;
+
+  @JsonProperty("access_token")
+  private String accessToken;
+
+  @JsonProperty("expires_in")
+  private String expiresIn;
+
+  @JsonProperty("refresh_token")
+  private String refreshToken;
+
+  @JsonProperty("scope")
+  private String scope;
+}

@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e3895de0a24c8e761718ca67e6986ae3f9240ac968e5f78e160a1a469eb5b060
-size 1298
+package com.ontheblock.www.member.interceptor;
+
+import com.ontheblock.www.member.JWT.JwtService;
+import com.ontheblock.www.member.repository.MemberRepository;
+import com.ontheblock.www.member.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+// Interceptor 등록해주는 클래스
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+	private JwtService jwtService;
+	private MemberService memberService;
+	private MemberRepository memberRepository;
+	@Autowired
+	public WebConfig(JwtService jwtService, MemberService memberService, MemberRepository memberRepository) {
+		super();
+		this.jwtService = jwtService;
+		this.memberService = memberService;
+		this.memberRepository = memberRepository;
+	}
+
+	@Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new CheckLoginInterceptor(jwtService, memberRepository))
+        .addPathPatterns("/**/check") // 특정 URL 패턴에만 적용
+        .order(1); // 인터셉터의 실행 순서 지정 (낮은 값이 먼저 실행);
+    }
+}

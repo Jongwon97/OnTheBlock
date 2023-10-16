@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc4fdadb7177f4d916261d3b407a9ac1bb11e8f793507f87f402943e4435d547
-size 845
+package com.ontheblock.www.instrument.domain;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity(name = "Instrument")
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Instrument {
+
+	@Id
+	@Column(name = "instrument_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "instrument_name", nullable = false)
+	private String instrumentName;
+
+	public Instrument(MemberInstrument memberInstrument){
+		this.id= memberInstrument.getInstrument().getId();
+		this.instrumentName=memberInstrument.getInstrument().getInstrumentName();
+	}
+
+}
