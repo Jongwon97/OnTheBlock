@@ -1,2 +1,3 @@
-endpoint = "http://j9a402.p.ssafy.io:9200"
-index = "ontheblock"
+version https://git-lfs.github.com/spec/v1
+oid sha256:164b8ed00d0593cf0475146f5c6f3a724ea476cd960889badac4948a11a4094c
+size 64
