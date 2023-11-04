@@ -100,10 +100,11 @@
     <h3>1. 소셜 로그인</h3><img src="Documents/소셜 로그인.gif">
     <h3>2. 솔로 연주</h3><img src="Documents/솔로 연주.gif">
     <h3>3. 합주</h3><img src="Documents/합주 시작.gif">
-    <h3>4. 볼륨 조절</h3><img src="Documents/볼륨 조절.gif">
-    <h3>5. 영상 검색</h3><img src="Documents/검색.gif">
-    <h3>6. 추천 영상 조회</h3><img src="Documents/추천 영상 조회.gif">
-    <h3>7-1. 영상 댓글</h3><img src="Documents/영상 댓글.gif">
-    <h3>7-2. 유저 팔로잉</h3><img src="Documents/팔로잉.gif">
-    <h3>7-3. 실시간 알림 서비스</h3><img src="Documents/알림.gif">
+    <h3>3-1. 볼륨 조절</h3><img src="Documents/볼륨 조절.gif">
+    <h3>3-2. 싱크 조절</h3><img src="Documents/싱크 조절.gif">
+    <h3>4. 영상 검색</h3><img src="Documents/검색.gif">
+    <h3>5. 추천 영상 조회</h3><img src="Documents/추천 영상 조회.gif">
+    <h3>6-1. 영상 댓글</h3><img src="Documents/영상 댓글.gif">
+    <h3>6-2. 유저 팔로잉</h3><img src="Documents/팔로잉.gif">
+    <h3>6-3. 실시간 알림 서비스</h3><img src="Documents/알림.gif">
 </div>
